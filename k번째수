@@ -18,3 +18,13 @@ N개의 숫자로 이루어진 숫자열이 주어지면 해당 숫자열중에�
 #1 7
 #2 6 '''
 
+#import sys
+#sys.stdin=open("input.txt","rt")
+t=int(input())
+for T in range(t):
+    n,s,e,k=map(int,input().split())
+    lis=list(map(int,input().split()))
+    lis=lis[s-1:e]
+    lis.sort()
+    print("#"+str(T+1)+" "+str(lis[k-1]))
+    #print("#%d %d" %(T+1,lis[k-1]))
