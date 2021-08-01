@@ -26,3 +26,17 @@ for i in lis:
     
     
 # 1이 isPrime에서는 예외처리가 되는데 reverse한 결과가 1인거는 놓치기 
+
+'''
+def reverse(x):
+  res=0
+  while x>0:
+      t= x%10
+       res=res*10 + t
+       x= x//10
+  return res
+  
+ 위의 방식으로 하면 0이 앞에 오는 경우 
+
+
+'''
