@@ -1,0 +1,28 @@
+def isPrime(x):
+  for i in range(2,x):
+      if x%i==0:
+        return False
+  return True
+
+def reverse(x):
+  t=''
+  while x>0:
+    t+=str(x%10)
+    x=x//10
+  while t[0]=='0':
+    t=t[1:]
+  return int(t)
+
+
+n=int(input())
+lis=list(map(int,input().split()))
+
+for i in lis:
+  i=reverse(i)
+  if i==1:
+    continue
+  elif isPrime(i):
+    print(i)
+    
+    
+# 1이 isPrime에서는 예외처리가 되는데 reverse한 결과가 1인거는 놓치기 
