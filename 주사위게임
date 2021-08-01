@@ -1,0 +1,21 @@
+n=int(input())
+lis=[]
+for i in range(n):
+  lis.append(list(map(int,input().split())))
+listoftotal=[]
+  
+for j in range(n):
+  #세개 다 동일
+  if len(set(lis[j]))==1:
+    listoftotal.append(10000+lis[j][0]*1000)
+  elif len(set(lis[j]))==2:
+    #첫번째랑 두번째가 같으면
+    if lis[j][0]==lis[j][1] or lis[j][0]==lis[j][2]:
+      listoftotal.append(lis[j][0]*100+1000)
+    else:
+      listoftotal.append(lis[j][1]*100+1000)
+  else:
+    listoftotal.append(max(lis[j])*100)
+
+
+print(max(listoftotal))
