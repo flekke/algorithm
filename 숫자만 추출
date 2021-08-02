@@ -1,0 +1,14 @@
+word=input()
+new=''
+for i in word:
+  if 48<=ord(i)<=57:
+    new+=i
+new=int(new)
+#new는 새로운 자연수
+#약수 개수 구하기
+num=0
+for i in range(2,new):
+  if new%i==0:
+    num+=1
+print(new)
+print(num+2)
