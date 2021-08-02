@@ -1,0 +1,37 @@
+n1=int(input())
+lis1=list(map(int,input().split()))
+n2=int(input())
+lis2=list(map(int,input().split()))
+
+new=[]
+
+'''while len(lis1) and len(lis2):
+  if lis1[0]<lis2[0]:
+    new.append(lis1[0])
+    lis1=lis1[1:]
+  else:
+    new.append(lis2[0])
+    lis2=lis2[1:]
+if len(lis1):
+  new+=lis1
+elif len(lis2):
+  new+=lis2
+
+for i in new:
+  print(i, end=" ")
+  '''
+
+p1=p2=0
+while p1<n and p2<m:
+  if lis1[p1]<=lis2[p2]:
+    new.append(lis1[p1]
+    )
+    p1+=1
+  else:
+    new.append(lis2[p2])
+    p2+=1
+
+if p1<n:
+  new=new+lis1[p1:]
+if p2<n:
+  new=new+lis2[p2:]
