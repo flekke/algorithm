@@ -19,7 +19,7 @@ elif len(lis2):
 
 for i in new:
   print(i, end=" ")
-  '''
+'''
 
 p1=p2=0
 while p1<n and p2<m:
