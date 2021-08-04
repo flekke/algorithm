@@ -31,3 +31,43 @@ for d in range(n):
 
 ans=max(tem1,tem2,tem3,tem4)
 print(ans)'''
+
+
+#테스트케이스 5개중 4개는 통과한 코드
+'''
+n=int(input())
+lis=[]
+for i in range(n):
+  lis.append(list(map(int, input().split())))
+
+
+#가로
+tem1=0
+for i in range(n):
+  tem1=max(tem1,sum(lis[i]))
+
+#세로
+tem2=0
+for j in range(n):
+  tem2=max(tem2,sum(lis[j]))
+
+
+#대각선
+cnt=0
+tem3=0
+for k in range(n):
+  tem3=tem3+lis[k][cnt]
+  cnt+=1
+
+cnt2=0
+tem4=0
+for d in range(n):
+  tem4=tem4+lis[d][-1-cnt2]
+  cnt2+=1
+
+
+ans=max(tem1,tem2,tem3,tem4)
+print(ans)
+
+
+'''
