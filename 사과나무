@@ -45,3 +45,25 @@ for k in range(halfleng-1):
 
 print(total)
 
+
+
+
+'''
+n=int(input())
+a=[list(map(int,input().split())) for _ in range(n)]
+res=0
+s=e=n//2
+#s,e는 한 줄에서의 사과나무 범위
+for i in range(n):
+  for j in range(s,e+1):
+    res+=a[i][j]
+   #다음줄 갈때마다 s,e 범위 갱신
+  if i<n//2:
+    s-=1
+    e+=1
+  else:
+    s+=1
+    e-=1
+print(res)
+
+'''
