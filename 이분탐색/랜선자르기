@@ -48,3 +48,33 @@ for i in range(aim,0,-1):
     break
 print(ans)
 '''
+
+
+k,n=map(int,input().split())
+
+lis=[]
+for i in range(k):
+  lis.append(int(input()))
+
+def Count(leng):
+  tem=0
+  for i in lis:
+    tem+=i//leng
+  return tem
+
+s=1
+e=max(lis)
+
+ans=0
+while s<=e: 
+  mid=(s+e)//2
+  if Count(mid)>=n:
+    ans=mid
+    s=mid+1
+  else:
+    e=mid-1
+
+print(ans)
+  
+  
+  
