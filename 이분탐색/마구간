@@ -1,3 +1,7 @@
+#이분탐색의 논리는 사실상 간단하고 관건은 그 안에 쓸 함수를 구현하는 것... 
+#이 문제에서도 Count 함수 구현 방법을 떠올리지 못했다. (for문을 돌리며 각 인덱스의 원소값에서 이전sp의 값을 뺀 것이 leng(최대거리)이상이면 걔를 sp로 할당하고 말 하나 추가) 
+
+
 '''
 마구간 정하기(결정알고리즘)
 N개의 마구간이 수직선상에 있습니다. 각 마구간은 x1, x2, x3, ......, xN의 좌표를 가지며, 마
@@ -23,3 +27,35 @@ C마리의 말을 N개의 마구간에 배치했을 때 가장 가까운 두 말
 ▣ 출력예제 1
 3
 '''
+
+n,c=map(int,input().split())
+
+#n개의마구간,c마리말
+magu=[]
+for i in range(n):
+  magu.append(int(input()))
+
+#마구간 정렬
+magu.sort()
+#leng은 최대거리 후보
+def Count(leng):
+  sp=magu[0]
+  ans=1
+  for i in range(1,n):
+    if magu[i]-sp>=leng:
+      sp=magu[i]
+      ans+=1
+  return ans
+s=magu[0]
+e=magu[-1]
+res=0
+while s<=e:
+  mid=(s+e)//2
+  if Count(mid)>=c:
+    #print(mid)
+    res=mid
+    s=mid+1
+  else:
+    e=mid-1
+
+print(res)
