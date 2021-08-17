@@ -27,7 +27,7 @@ times=[]
 for i in range(n):
   times.append(list(map(int,input().split())))
 
-
+#아래 정렬 조건에서 (x[1], x[0])으로 하면 처음 조건이 같을 때 이후 조건 설정도 가능.
 times.sort(key=lambda x: x[1])
 
 ans=1
