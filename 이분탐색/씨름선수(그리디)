@@ -45,3 +45,16 @@ for i in range(n):
     else:
       continue
 print(cnt)
+
+'''
+ppl.sort(reverse= True)
+largest=0
+cnt=0
+#키가 높은순서로 정렬되어 있으니 몸무게가 그보다 낮으면 지나가고 더크면 카운트 해주는 것
+for h, w in ppl:
+  if w>largest:
+    largest=w
+    cnt+=1
+
+
+'''
