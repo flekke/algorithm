@@ -18,3 +18,21 @@ N명의 승객 몸무게가 주어졌을 때 승객 모두가 탈출하기 위�
 3
 
 '''
+
+n,m=map(int,input().split())
+ppl=list(map(int,input().split()))
+
+ppl.sort()
+
+#맨마지막과 맨처음의 합이 m이하면 같이 아니면 혼자 보트타
+cnt=0
+while ppl:
+  if len(ppl)>1 and ppl[-1]+ppl[0]<=m:
+    cnt+=1
+    ppl.pop()
+    ppl.pop(0)
+  else:
+    cnt+=1
+    ppl.pop()
+
+print(cnt)
