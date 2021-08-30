@@ -27,3 +27,28 @@ LRLL
 3
 LRR
 '''
+
+n=int(input())
+lis=list(map(int,input().split())
+
+left=0
+right=n-1
+cur=0
+tmp=[]
+ans=''
+while left<=right:
+  if lis[left]>cur:
+    tmp.append((lis[left],'L')
+  if lis[right]>cur:
+    tmp.append((lis[right],'R')
+  tmp.sort()
+  if len(tmp)==0:
+    break
+  else:
+    ans+=tmp[0][1]
+    if tmp[0][1]=='L':
+      left+=1
+    else:
+      right-=1
+    cur=tmp[0][0]
+  tmp.clear()
