@@ -17,3 +17,21 @@
 ▣ 출력예제 2
 99776
 '''
+num=int(input())
+n=int(input())
+lis=list(map(int,str(num)))
+
+stack=[]
+for i in lis:
+  while stack and n and stack[-1]<i:
+    stack.pop()
+    count-=1
+
+  stack.append(i)
+
+if n!=0:
+  stack=stack[:-n]
+
+#ans=str(stack)+str(lis[-count])
+print(stack)
+
