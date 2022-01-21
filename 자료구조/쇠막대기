@@ -37,3 +37,19 @@
 출처 : 한국정보올림피아드
 
 '''
+sticks=input()
+stack=[]
+ans=0
+for i in range(len(sticks)):
+  if sticks[i]=='(':
+    stack.append(sticks[i])
+  else:
+    if sticks[i-1]=='(':
+      stack.pop()
+      ans+=len(stack)
+      
+    else:
+      stack=stack[1:]    #강의에서는 그냥 마지막거를 팝해버림
+      ans+=1
+
+print(ans)
